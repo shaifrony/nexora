@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b3d2e">
+  <meta name="description" content="NEXORA — connect food and agriculture buyers with suppliers.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>NEXORA | Global Food Trade</title>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">N</span><span>NEXORA<small>GLOBAL FOOD TRADE</small></span></a>
+  <nav><a href="#market">Marketplace</a><a href="#how">How it works</a></nav>
+  <button class="outline" id="profileBtn">My business</button>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">A simpler way to trade food globally</p>
+      <h1>Find trusted food suppliers.<br><em>Grow beyond borders.</em></h1>
+      <p class="sub">Discover food and agricultural products from suppliers. Connect directly with buyers and sellers.</p>
+      <a class="primary" href="#market">Explore products</a>
+    </div>
+    <div class="hero-art" aria-label="Food trade illustration">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="globe">🌍</div><span class="float f1">🥭</span><span class="float f2">🌾</span><span class="float f3">🫘</span>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div><strong id="productCount">3</strong><span>Demo products</span></div>
+    <div><strong>2</strong><span>Trade roles</span></div>
+    <div><strong>1</strong><span>Shared marketplace</span></div>
+  </section>
+
+  <section id="market" class="market">
+    <div class="section-head"><div><p class="eyebrow">Discover supply</p><h2>Marketplace</h2></div><button class="primary" id="addProductBtn">＋ List a product</button></div>
+    <div class="filters">
+      <input id="search" type="search" placeholder="Search mango, rice, lentils...">
+      <select id="category"><option value="all">All categories</option><option>Fruit</option><option>Grain</option><option>Pulse</option></select>
+      <select id="type"><option value="all">All trade types</option><option>Export</option><option>Wholesale</option><option>Local</option></select>
+    </div>
+    <div id="products" class="product-grid"></div>
+    <div class="ad-slot"><span>ADVERTISEMENT</span><strong>Ad placement reserved for approved partners</strong><small>No paid ads are active in this prototype.</small></div>
+  </section>
+
+  <section id="how" class="how">
+    <p class="eyebrow">Built for trade connections</p><h2>From product discovery to first conversation.</h2>
+    <div class="steps"><article><b>01</b><h3>Create a business profile</h3><p>Introduce your company and the products you supply or need.</p></article><article><b>02</b><h3>Discover opportunities</h3><p>Search listings and review the available product details.</p></article><article><b>03</b><h3>Send an inquiry</h3><p>Start a direct conversation to discuss quantity, quality and terms.</p></article></div>
+  </section>
+</main>
+<footer><span class="brand-text">NEXORA</span><span>Connecting food trade, one conversation at a time.</span><span>Prototype · 2026</span></footer>
+
+<dialog id="productDialog">
+  <form id="productForm" method="dialog">
+    <div class="dialog-head"><h2>List a product</h2><button type="button" class="x" data-close="productDialog">×</button></div>
+    <label>Product name<input name="name" required maxlength="70" placeholder="e.g. Fresh mango"></label>
+    <div class="two"><label>Category<select name="category"><option>Fruit</option><option>Grain</option><option>Pulse</option><option>Other</option></select></label><label>Trade type<select name="trade"><option>Export</option><option>Wholesale</option><option>Local</option></select></label></div>
+    <label>Origin<input name="origin" required placeholder="e.g. Rajshahi, Bangladesh"></label>
+    <label>Short description<textarea name="description" maxlength="240" placeholder="Variety, season, packaging..."></textarea></label>
+    <label>Contact email or phone<input name="contact" required placeholder="Business contact"></label>
+    <button class="primary full" type="submit">Save demo listing</button>
+    <p class="hint">Demo only: listing is saved on this device, not published online.</p>
+  </form>
+</dialog>
+
+<dialog id="profileDialog">
+  <form id="profileForm" method="dialog">
+    <div class="dialog-head"><h2>Business profile</h2><button type="button" class="x" data-close="profileDialog">×</button></div>
+    <label>Business name<input name="business" required placeholder="Your company"></label>
+    <label>Your role<select name="role"><option>Seller</option><option>Buyer</option><option>Both</option></select></label>
+    <label>Country<input name="country" value="Bangladesh"></label>
+    <label>Contact<input name="contact" required placeholder="Email or phone"></label>
+    <button class="primary full" type="submit">Save on this device</button>
+    <p class="hint">Demo only: use business contact details, not personal sensitive data.</p>
+  </form>
+</dialog>
+<script src="app.js"></script>
+</body></html>
